@@ -5,7 +5,7 @@ CREATE TABLE workers(
   SALARY NUMERIC(8 , 2)
 );
 
-DROP TABLE workers;
+DROP TABLE employees;
 
 
 ALTER TABLE workers 
@@ -71,8 +71,15 @@ WHERE name != 'Petro'
 SELECT * FROM employees
 WHERE (DATE_PART('year', AGE(CURRENT_DATE, birthday)) > 27) OR salary = 1000
 
-SELECT * FROM employees
-WHERE (DATE_PART('year', AGE(CURRENT_DATE, birthday)) > 25) AND (DATE_PART('year', AGE(CURRENT_DATE, birthday)) <= 28)
+DELETE FROM employees
+WHERE id = 7
+
+DELETE  FROM employees
+WHERE name = 'Mykola'
+
+DELETE FROM employees
+WHERE vacation_days > 20
+
 
 
 SELECT * FROM employees 

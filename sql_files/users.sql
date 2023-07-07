@@ -6,5 +6,7 @@ VALUES
 ('Yaroslav' , '1980-01-01' , 1500 , 12 , 'sdsdsds@gmail.com') , 
 ('Pavel' , '1993-01-01' , 1000 , 12 , 'sdsds@gmail.com') , 
 ('Gennadiy' ,  '1992-04-02' , 1200 , 12, 'fdkfdkfs@gmail.com') , 
+('Mykola' ,  '1992-04-02' , 1200 , 12, 'fdkfdsdsdsddddkfs@gmail.com') ,
+ ('Andriy' ,  '1992-04-02' , 1200 , 12, 'fdkfssddsdkfs@gmail.com') , 
 ('Vasya' , '1991-02-07' , 500 , 12 , 'asdsds@gmail.com');
 
