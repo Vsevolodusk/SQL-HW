@@ -67,9 +67,21 @@ WHERE name = 'Petro'
 select * FROM employees
 WHERE name != 'Petro'
 
+SELECT * FROM (
+SELECT * , EXTRACT(YEAR FROM AGE(birthday)) AS "USERS_AGE" FROM employees
+) AS USERS_WITH_AGE 
+WHERE "USERS_AGE" > 27
 
-SELECT * FROM employees
-WHERE (DATE_PART('year', AGE(CURRENT_DATE, birthday)) > 27) OR salary = 1000
+SELECT * FROM (
+SELECT * , EXTRACT(YEAR FROM AGE(birthday)) AS "USERS_AGE" FROM employees
+) AS USERS_WITH_AGE 
+WHERE "USERS_AGE" > 25 AND "USERS_AGE" <= 28
+
+SELECT * FROM (
+SELECT * , EXTRACT(YEAR FROM AGE(birthday)) AS "USERS_AGE" FROM employees
+) AS USERS_WITH_AGE 
+WHERE "USERS_AGE" BETWEEN 23 AND 27 OR  salary BETWEEN 400 AND 1000
+
 
 DELETE FROM employees
 WHERE id = 7
@@ -83,4 +95,8 @@ WHERE vacation_days > 20
 
 
 SELECT * FROM employees 
+
+
+
+
 
